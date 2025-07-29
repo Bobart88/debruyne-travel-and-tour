@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeBruyne Travel & Tours | Explore the World in Style</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+</head>
+
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="{{ url_for('home') }}">DeBruyne <span>Travel & Tours</span></a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION (OPTIONAL DEFAULT) ==================== -->
+    {% if show_hero %}
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Explore the World in Style</h1>
+                <p>Your luxury gateway to unforgettable destinations and curated experiences.</p>
+                <a href="{{ url_for('services') }}" class="btn-cta">Discover Our Services</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- About Column -->
+            <div class="footer-column">
+                <h3>About DeBruyne</h3>
+                <p>We design immersive travel experiences tailored for luxury seekers. Whether you're off to the savannas or skylines, we get you there in comfort and style.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('services') }}">Our Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Ring Road, Accra, Ghana</li>
+                    <li><i class="fas fa-phone-alt"></i> +233 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@debruynetravel.com</li>
+                    <li><i class="fas fa-clock"></i> Mon - Sat: 8am – 6pm</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; {{ current_year }} DeBruyne Travel & Tours. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

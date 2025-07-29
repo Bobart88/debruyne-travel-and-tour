@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Explore the World in Style</h1>
+        <p>Your journey begins here. Discover luxury travel experiences curated just for you.</p>
+        <a href="{{ url_for('services') }}" class="btn-primary">Discover Our Services</a>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Travel With Us?</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <i class="fas fa-star"></i>
+                <h3>Luxury Experiences</h3>
+                <p>We provide premium travel options with top-notch accommodations and curated activities.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-user-friends"></i>
+                <h3>Personalized Service</h3>
+                <p>Each trip is designed around your preferences. No two journeys are ever the same.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-globe"></i>
+                <h3>Global Reach</h3>
+                <p>From African safaris to European escapes, we cover destinations across the globe.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- POPULAR DESTINATIONS -->
+<section class="destinations">
+    <div class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="{{ url_for('static', filename='images/paris.jpg') }}" alt="Paris">
+                <h4>Paris, France</h4>
+                <p>The city of lights and romance, complete with gourmet cuisine and art.</p>
+            </div>
+            <div class="destination-card">
+                <img src="{{ url_for('static', filename='images/cape-town.jpg') }}" alt="Cape Town">
+                <h4>Cape Town, South Africa</h4>
+                <p>Stunning beaches, mountain views, and vibrant culture await you.</p>
+            </div>
+            <div class="destination-card">
+                <img src="{{ url_for('static', filename='images/dubai.jpg') }}" alt="Dubai">
+                <h4>Dubai, UAE</h4>
+                <p>Luxury shopping, ultramodern architecture, and a lively nightlife scene.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"DeBruyne Travel made my honeymoon in Bali absolutely unforgettable. Five stars!"</p>
+                <h4>– Clara Mensah</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Excellent customer service and incredible attention to detail. Highly recommend."</p>
+                <h4>– Nana Osei</h4>
+            </div>
+            <div class="testimonial">
+                <p>"We explored Morocco like royalty. Every moment was well-planned and stress-free."</p>
+                <h4>– Ama Boateng</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA / BOOKING -->
+<section class="call-to-action">
+    <div class="cta-container">
+        <h2>Ready to Plan Your Dream Trip?</h2>
+        <p>Our travel experts are ready to help you build the perfect itinerary.</p>
+        <a href="{{ url_for('contact') }}" class="btn-primary">Contact Us Today</a>
+    </div>
+</section>
+
+{% endblock %}

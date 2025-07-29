@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/about-hero.jpg') }}" alt="Explore with DeBruyne">
+        <div class="hero-text">
+            <h1>About DeBruyne Travel and Tours</h1>
+            <p>Turning Journeys into Memories</p>
+        </div>
+    </div>
+</section>
+
+<section class="our-story">
+    <div class="container">
+        <h2>Our Story</h2>
+        <p>
+            DeBruyne Travel and Tours was born out of a passion for discovery and a belief that travel should be more than just movement—it should be an experience that transforms you. With a team of dedicated explorers and planners, we’ve spent over a decade helping travelers find not just destinations, but unforgettable moments.
+        </p>
+        <p>
+            Whether it's a luxury honeymoon, a family holiday, or a solo adventure through the wild, we handle every detail with precision. Our local expertise, international partnerships, and love for adventure make us your best companion in exploring the world.
+        </p>
+    </div>
+</section>
+
+<section class="mission-vision">
+    <div class="container">
+        <div class="mv-grid">
+            <div class="mv-item">
+                <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                <p>To redefine travel by delivering extraordinary experiences tailored to every traveler’s dreams, while ensuring comfort, cultural immersion, and sustainability.</p>
+            </div>
+            <div class="mv-item">
+                <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                <p>To become Africa’s most trusted and loved travel brand, connecting people across continents through unforgettable journeys.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-choose-us">
+    <div class="container">
+        <h2>Why Choose Us?</h2>
+        <ul class="choose-list">
+            <li><i class="fas fa-globe-africa"></i> Deep local knowledge combined with global networks</li>
+            <li><i class="fas fa-hands-helping"></i> Personalized customer care from inquiry to return</li>
+            <li><i class="fas fa-star"></i> Premium travel experiences at affordable rates</li>
+            <li><i class="fas fa-shield-alt"></i> Fully licensed and insured for your peace of mind</li>
+        </ul>
+    </div>
+</section>
+
+<section class="team">
+    <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="CEO">
+                <h4>Linda Mensah</h4>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Travel Consultant">
+                <h4>Kwame Ofori</h4>
+                <p>Senior Travel Consultant</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Guide">
+                <h4>Akua Boateng</h4>
+                <p>Tour Guide</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
